@@ -7,6 +7,6 @@
   ],
   "name": "github",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://cunning-raccoon-au92ol-dev-ed.my.salesforce.com",
   "sourceApiVersion": "54.0"
 }
