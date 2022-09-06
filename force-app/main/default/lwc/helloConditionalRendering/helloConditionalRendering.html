@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <lightning-button 
+            variant="brand" 
+            label="Show Message" 
+            title="Primary action" 
+            onclick={handleClick} 
+            class="slds-var-m-around_medium">
+        </lightning-button>
+        <template if:true={isVisible}>
+            <div class="slds-var-m-around_medium">Welcome to Maceió!</div>
+        </template>
+        <template if:false={isVisible}>
+            <div class="slds-var-m-around_medium">Click this button see the message hidden</div>
+        </template>
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input 
+                type="text" 
+                label="Enter 'hello' to see the message"
+                onkeyup={helloHandler}>
+            </lightning-input>
+        </div>
+        <template if:true={hello}>
+            <div class="slds-var-m-around_medium">Hello Alan!</div>
+        </template>
+    </lightning-card>
+</template>
