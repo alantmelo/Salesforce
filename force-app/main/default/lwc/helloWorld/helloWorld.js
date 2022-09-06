@@ -24,4 +24,17 @@ export default class HelloWorld extends LightningElement {
     trackerHandler(event) {
         this.address = {...this.address, "city": event.target.value}
     }
+
+    /*Getter example */
+    users = ["Alan", "Monique"];
+    number1 = 100;
+    number2 = 200;
+    
+    get firstUser() {
+        return this.users[0].toUpperCase();
+    }
+
+    get multiply() {
+        return this.number1 * this.number2;
+    }
 }
