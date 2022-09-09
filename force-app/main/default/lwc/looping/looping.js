@@ -2,9 +2,11 @@ import { LightningElement } from 'lwc';
 
 export default class Looping extends LightningElement {
     carlist = ["Argo", "Kwid", "C4", "Celta"];
+    
     carListHandler(event) {
         console.log(event.target.value);
-        this.carlist = [...this.carlist, event.target.value];
+        if(event.target.value !== "")
+            this.carlist = [...this.carlist, event.target.value];
         event.target.value = "";
     }
 
