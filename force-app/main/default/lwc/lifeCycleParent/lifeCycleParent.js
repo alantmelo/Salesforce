@@ -24,5 +24,10 @@ export default class LifeCycleParent extends LightningElement {
         this.name = event.target.value;
     }
 
+    errorCallback(error, stack) {
+        console.log(error.message);
+        console.log(stack);
+    }
+
 
 }
