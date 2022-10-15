@@ -7,6 +7,15 @@
                 onkeyup={changerHandler}>
             </lightning-input>
         </div>
+        <lightning-button 
+                    variant="brand" 
+                    label="Show/Remove Child"
+                    title="Show/Remove"
+                    onclick={clickHandler}
+                    class="slds-var-m-around_small">
+            </lightning-button>
     </lightning-card>
-    <c-life-cycle-child></c-life-cycle-child>
+    <template if:true={isVisible}>
+        <c-life-cycle-child></c-life-cycle-child>
+    </template>
 </template>

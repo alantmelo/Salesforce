@@ -2,6 +2,7 @@ import { LightningElement } from 'lwc';
 
 export default class LifeCycleParent extends LightningElement {
     name;
+    isVisible;
     constructor() {
         super();
         console.log("Parent constructor called: At this point, the component proprerties wont be ready yet");
@@ -15,7 +16,13 @@ export default class LifeCycleParent extends LightningElement {
         console.log("Parent renderedCallback called: NEVER USER: update a wire adapter/change state or update proprerty of a component")
     }
 
+    clickHandler() {
+        this.isVisible = !this.isVisible;
+    }
+
     changerHandler(event) {
         this.name = event.target.value;
     }
+
+
 }
