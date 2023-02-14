@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title='Carousel'>
+        <lightning-carousel>
+            <template for:each={carouselDetail} for:item="item">
+                <lightning-carousel-image
+                    key={item.id}
+                    src = "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg"
+                    header = {item.header}
+                    description = {item.description}
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+    </lightning-card>
+</template>

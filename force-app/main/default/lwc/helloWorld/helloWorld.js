@@ -26,7 +26,7 @@ export default class HelloWorld extends LightningElement {
     }
 
     /*Getter example */
-    users = ["Alan", "Monique"];
+    users = ["Alan", "Melo"];
     number1 = 100;
     number2 = 200;
     
